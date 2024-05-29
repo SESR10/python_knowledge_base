@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react'
+import { Fragment, useState } from 'react';
 import {
   Dialog,
   DialogPanel,
@@ -10,7 +10,7 @@ import {
   PopoverGroup,
   PopoverPanel,
   Transition,
-} from '@headlessui/react'
+} from '@headlessui/react';
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -19,8 +19,8 @@ import {
   ClipboardDocumentListIcon,
   XMarkIcon,
   VariableIcon
-} from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+} from '@heroicons/react/24/outline';
+import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
 
 const products = [
   { name: 'Variables', description: 'tipos según el contenido que almacenan y cómo se almacena ese contenido en la memoria', href: '#', icon: VariableIcon },
@@ -28,21 +28,20 @@ const products = [
   { name: 'Condicionales', description: 'if-elif-else', href: '#', icon:  QuestionMarkCircleIcon},
   { name: 'Bucles', description: 'Bucle For y Bucle While', href: '#', icon: ArrowPathIcon },
   { name: 'variables compuestas', description: 'Listas, Tublas y Diccionarios', href: '#', icon: ClipboardDocumentListIcon },
-]
-
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(' ');
 }
 
 export default function Example() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="bg-white">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <a href="src/components#" className="-m-1.5 p-1.5">
+          <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
           </a>
@@ -102,7 +101,7 @@ export default function Example() {
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="src/components#" className="-m-1.5 p-1.5">
+            <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
                 className="h-8 w-auto"
@@ -122,45 +121,26 @@ export default function Example() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <Disclosure as="div" className="-mx-3">
-                  {({ open }) => (
-                    <>
-                      <DisclosureButton className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                        Product
-                        <ChevronDownIcon
-                          className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
-                          aria-hidden="true"
-                        />
-                      </DisclosureButton>
-                      <DisclosurePanel className="mt-2 space-y-2">
-                        {[...products, ...callsToAction].map((item) => (
-                          <DisclosureButton
-                            key={item.name}
-                            as="a"
-                            href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                          >
-                            {item.name}
-                          </DisclosureButton>
-                        ))}
-                      </DisclosurePanel>
-                    </>
-                  )}
-                </Disclosure>
                 <a
-                  href="src/components#"
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Home
+                </a>
+                <a
+                  href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Features
                 </a>
                 <a
-                  href="src/components#"
+                  href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Marketplace
                 </a>
                 <a
-                  href="src/components#"
+                  href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Company
@@ -168,7 +148,7 @@ export default function Example() {
               </div>
               <div className="py-6">
                 <a
-                  href="src/components#"
+                  href="#"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Log in
@@ -179,5 +159,5 @@ export default function Example() {
         </DialogPanel>
       </Dialog>
     </header>
-  )
+  );
 }
